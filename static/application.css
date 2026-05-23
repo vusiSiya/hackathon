@@ -1,0 +1,41 @@
+
+html {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background: lightgrey;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+div.container {
+    display: grid;
+    
+    margin: auto;
+    width: fit-content;
+    
+}
+
+form {
+    display: grid;
+    gap: .25em;
+}
+
+form > div {
+    display: grid;
+    gap: .5em;
+}
+
+form > input {
+    padding: .5em;
+    border: 1px solid lightgrey;
+    border-radius: .5rem;
+    border-width: .25em;
+}
+
+input:hover {
+    border-color: lightskyblue;
+}
