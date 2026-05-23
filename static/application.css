@@ -29,11 +29,12 @@ form > div {
     gap: .5em;
 }
 
-form > input {
+input {
     padding: .5em;
-    border: 1px solid lightgrey;
-    border-radius: .5rem;
+    border: 1px solid white;
+    border-radius: .45rem;
     border-width: .25em;
+    font-size: medium;
 }
 
 input:hover {

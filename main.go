@@ -15,7 +15,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
-	mux.HandleFunc("/zoning-license", Zoning)
+	mux.HandleFunc("/zone-license", Zoning)
 	mux.HandleFunc("/signup", Signup)
 
 	mux.HandleFunc("/create-account", func(w http.ResponseWriter, r *http.Request) {
