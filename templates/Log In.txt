@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- M. Khwela (2026442703) -->
+<!-- CSIS1664 (2025) - Practical 5 -->
+<!-- File name: index.html -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Government Project</title>
+		<link rel = "stylesheet"
+			  href = "styles/normalize.css">
+		<link rel = "stylesheet"
+			  href = "styles/Gov_Project.css">
+		
+    </head>
+    <body>
+        <div id ="Container">
+			<!-- ================= HEADER (start) ================= -->
+			
+			<header>
+				<!-- Logo image -->
+				<img src="images/Gov_Logo.png" alt="LevelUp Logo">
+				
+				
+			</header>
+			<!-- ================= HEADER (end) ================= -->
+
+			<!-- ================= NAVIGATION (start) ================= -->
+			<nav>
+				<p>
+					<a class="current">Welcome &nbsp;</a>
+					
+				</p>
+			</nav>
+		
+			<!-- ================= NAVIGATION (end) ================= -->
+
+			<!-- ================= MAIN (start) ================= -->
+			<main>
+			<section id="log">
+				<div class="dropdown">
+				<a href="#loginForm">Log In</a>
+				  <div id="loginForm" class="dropdown-content">
+					<form action="/login" method="post">
+					  <input type="text" name="username" placeholder="Enter name" required>
+					  <br>
+					  <input type="text" name="surname" placeholder="Enter surname" required>
+					  <br>
+					  <input type="password" name="password" placeholder="Password" required>
+					  <br>
+					  <button type="submit">Log In</button>
+					</form>
+				  </div>
+				</div>
+			</section>
+				
+				<p>
+					Helping formalize the informal economy.
+				</p>
+
+				
+				<section id="Permits">
+					<h2><a href = "Permits.html">Permits</a></h2>
+				
+				</section>
+				
+		<section id="Licenses">
+			<h2><a href = "Licenses.html">Licenses</a></h2>
+		
+		
+		</section>
+				
+		 </main>
+			<!-- ================= MAIN (end) ================= -->
+
+			<!-- ================= FOOTER (start) ================= -->
+			<footer>
+			<hr>
+			 <p>
+				Created by: 
+				<p><M Khwela</p>
+			</p>
+			<p>&copy; Infinite Loopers</p>
+			</footer>
+			<!-- ================= FOOTER (end) ================= -->
+		</div> <!--Container Div>
+    </body>
+</html>
