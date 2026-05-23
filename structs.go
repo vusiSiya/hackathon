@@ -1,7 +1,9 @@
 package main
 
 type User struct {
+	Email          string // also serves as primary key?
 	Name           string
-	Email          string
 	HashedPassword string
+	SessionToken string
+	CSRFToken string
 }
