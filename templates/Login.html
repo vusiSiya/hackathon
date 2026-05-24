@@ -21,7 +21,13 @@
 				</p>
 			</nav>	
 			<main>
-			<form id="Login">
+			
+			 <ol style="display: flex; list-style: none; gap: 15px; padding: 0;">
+					<li><h2><a href="WelcomePage.html">Home</a></h2></li>
+					<li><h2><a href="Login.html">&lt;&lt; Login</a></h2></li>
+				  </ol>
+			
+			<form id="Login" method="post" action="/api/signinp">
 				<label for="uName"><b>Userame</b></label>
 				<input type="text" placeholder="Enter name" name="uName" required>
 				
@@ -34,11 +40,13 @@
 				<label>
 					<input type="checkbox" checked="checked" name="remember">Remember me
 				</label>
+				<br>
+				
+				<button type="submit">Login</button>
+				
+				
 				</form>
 				
-				<script>
-					
-				</script>
 				
 		 </main>
 			<!-- ================= MAIN (end) ================= -->
