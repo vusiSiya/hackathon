@@ -107,12 +107,15 @@ func HandleSignIn(w http.ResponseWriter, r *http.Request) {
 	password := r.FormValue("password")
 
 	user, ok := Users[email]
+
+	log.Printf("Attempting login for user: %s", email)
+
 	if !ok {
 		http.Error(w, "Invalid Email Address", http.StatusUnauthorized)
 		return
 	}
 
-	if !checkPassWordHash(user.HashedPassword, password) {
+	if !checkPassWordHash(password, user.HashedPassword) {
 		http.Error(w, "Incorrect Password", http.StatusUnauthorized)
 		return
 	}
@@ -135,7 +138,7 @@ func HandleSignIn(w http.ResponseWriter, r *http.Request) {
 
 	user.CSRFToken = CSRFToken
 	user.SessionToken = sessionToken
-	fmt.Fprintf(w, "Welcome %s", user.Name)
+	// fmt.Fprintf(w, "Welcome %s", user.Name)
 	log.Printf("User %s signed in successfully", user.Name)
 
 	http.Redirect(w, r, "/", http.StatusSeeOther)
@@ -171,7 +174,8 @@ func SignOut(w http.ResponseWriter, r *http.Request) {
 	sessionToken, err := r.Cookie("session-token")
 	if err != nil {
 		// Already logged out or no session - that's fine
-		fmt.Fprintln(w, "Signed out")
+		// fmt.Fprintln(w, "Signed out")
+		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
 	}
 
