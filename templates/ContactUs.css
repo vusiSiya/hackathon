@@ -1,0 +1,62 @@
+/*Mpho Khwela
+2026442703
+ContactUs.css
+*/
+div#Container {
+	padding: 10px;
+    width: 800px ;
+    margin: 15px auto;
+    background-color: rgba(0,0, 255, 22%);
+	font-family: Arial, Helvetica, sans-serif; 
+}
+div#Container section#Logo img {
+	position: absolute;
+	top: 22px;
+	left: 250px;
+	
+}
+
+section img {
+	height: 80px;
+	width: 75px;
+    float: left;
+	margin-top: 5px;
+	margin-left: 2px;
+}
+
+h1 {
+	text-align: center;
+}
+
+section p {
+	margin-left: 120pt;
+}
+
+main section {
+	margin: 15px;
+	padding: 4px;
+	border: 0.5px solid grey;
+	box-shadow: rgba(0, 35, 0, 10%);
+}
+
+
+nav {
+	text-align: center;
+}
+
+nav a {
+	text-align: center;
+	padding: 1rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	text: 1px bold purple;
+	text-decoration: none;
+
+}
+
+nav a.current, nav a:hover{
+	background-color: orange;
+	border: 1px solid orange;
+	border-radius: 5rem;
+	text: 1px bold purple;
+}
