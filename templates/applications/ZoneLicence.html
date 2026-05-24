@@ -10,23 +10,23 @@
 	<main>
     <div id="FormContainer" class="container">
         <h1>Zone License Application</h1>
-        <form id="LogForm" method="post">
-            
-            <div>
-				<section id="login">
+        <form id="LogForm" method="post" action="/api/apply-zone-license">
+			<section id="login">
 				<h2>Enter your details:</h2>
+                <input type="hidden" name="application_type" value="zone-license"/>
+
 				<label for="FullName"><b>Name</b></label>
-                <input type="text" name="name" placeholder="FullName"/>
+                <input type="text" name="name" placeholder="FullName" required/>
 				
 				<label for="IDNumber"><b>ID Number</b></label>
-                <input type="text" name="name" placeholder="e.g. 1234567890987"/>
+                <input type="text" name="id-number" placeholder="e.g. 1234567890987" required/>
 				
 				<label for="email"><b>Email</b></label>
-                <input type="email" name="email" placeholder="Email"/>
+                <input type="email" name="email" placeholder="Email" required/>
 
                 <label for="business-name"><b>Business Name</b></label>
-                <input type="text" name="business-name" placeholder="Business Name"/>
-                <select name="business-type" id="business-type">
+                <input type="text" name="business-name" placeholder="Business Name" required/>
+                <select name="business-type" id="business-type" required>
                     <option value="">Business Type</option>
                     <option value="tuck-shop">Tuck Shop</option>
                     <option value="hair-salon">Hair Salon</option>
@@ -34,10 +34,9 @@
                     <option value="street-vendor">Street Vendor</option>
                     <option value="other">Other</option>
                 </select>
-                <textarea type="text" name="address" placeholder="Street Address"></textarea>
-                
-				</section>
-            </div>
+                <textarea type="text" name="address" placeholder="Street Address" required></textarea> 
+			</section>
+            <button type="submit">Submit</button>
         </form>
     
 	</main>
@@ -46,10 +45,10 @@
 			<hr>
 			 <p>
 				Created by: 
-				<p>M Khwela</p>
+				<!-- <p>M Khwela</p> -->
 			</p>
 			<p>&copy; Infinite Loopers</p>
-			</footer>
+	</footer>
 			<!-- ================= FOOTER (end) ================= -->
 		</div> <!--Container Div -->
 </body>

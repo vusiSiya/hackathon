@@ -3,10 +3,11 @@ package main
 import (
 	"crypto/rand"
 	"encoding/base64"
-	"net/http"
-	"html/template"
-	"golang.org/x/crypto/bcrypt"
 	"errors"
+	"html/template"
+	"net/http"
+
+	"golang.org/x/crypto/bcrypt"
 )
 
 func renderTemplate(w http.ResponseWriter, tmplName string, data interface{}) {
@@ -46,7 +47,7 @@ func Authorize(r *http.Request) error {
 	email := r.FormValue("email")
 	user, ok := Users[email]
 	if !ok {
-		panic(errors.New("User does not exist"))
+		return errors.New("User does not exist")
 	}
 
 	sToken, err := r.Cookie("session-token")
@@ -61,4 +62,11 @@ func Authorize(r *http.Request) error {
 	return nil
 }
 
-
+func findUserBySessionToken(token string) (*User, bool) {
+	for _, user := range Users {
+		if user.SessionToken == token {
+			return user, true
+		}
+	}
+	return nil, false
+}
