@@ -3,22 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/application.css" />
+      <!--  <link rel="stylesheet" href="../static/application.css" />-->
+		   <link rel="stylesheet" href="styles/Gov_Project.css"/>
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <form method="post" action="/create-account">
-            <h3>Signup:</h3>
-            <div>
-                <input type="text" name="name" placeholder="Name" />
-                <input type="email" name="email" placeholder="Email" />
-                <input type="password" name="password" placeholder="Password" />
-                <button class="submit">
-                    Submit
-                </button>
-            </div>
-        </form>
-    </div>
-</body>
+<div class="Container">
+			 <div id ="Container">
+			<!-- ================= HEADER (start) ================= -->
+			<header>
+				<!-- Logo image -->
+				<img src="images/Gov_Logo.png" alt="Government Logo">
+			</header>
+			<nav>
+				<p>
+					<a class="current">Sign Up Page &nbsp;</a>
+				</p>
+			</nav>	
+			<main>
+			
+			 <ol style="display: flex; list-style: none; gap: 15px; padding: 0;">
+					<li><h2><a href="/">Home</a></h2></li>
+					<li><h2><a href="/signup">&lt;&lt; Sign Up</a></h2></li>
+				  </ol>
+		
+			<form id="signUp" method="post" action="/create-account">
+				<h2>Signup:</h2>
+			  
+						<label><b>Name</b></label>
+						<input type="text" name="name" placeholder="Name" />
+						<label><b>Surname</b></label>
+						
+						 <input type="text" name="Surname" placeholder="Surname" />
+						 <label><b>Email</b></label>
+						 
+						<input type="email" name="email" placeholder="Email" />
+						<label><b>Enter a password</b></label>
+						
+						<input type="password" name="password" placeholder="Password" />
+							<button type="submit">Sign Up</button>
+			   
+			</form>
+		
+	</main>
+	
+
+
+			<footer>
+			
+			
+			<p>&copy; Infinite Loopers</p>
+			</footer>
+		</div>
+	</body>
 </html>

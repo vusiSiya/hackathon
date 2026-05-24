@@ -23,19 +23,22 @@
 			<main>
 			
 			 <ol style="display: flex; list-style: none; gap: 15px; padding: 0;">
-					<li><h2><a href="/">Home</a></h2></li>
-					<li><h2><a href="/login">&lt;&lt; Login</a></h2></li>
+					<li><h2><a href="WelcomePage.html">Home</a></h2></li>
+					<li><h2><a href="Login.html">&lt;&lt; Login</a></h2></li>
 				  </ol>
 			
 
 
-			<form id="Login" method="post" action="/api/login">
+			<form id="signIn" method="post" action="/api/login">
 
-				<label for="uName"><b>Username</b></label>
+				<label for="uName"><b>Userame</b></label>
 				<input type="text" placeholder="Enter name" name="uName" required>
 				
 				<label for="uSurname"><b>Surname</b></label>
 				<input type="text" placeholder="Enter surname" name="uSurname" required>
+				
+				<label for="psw"><b>Password</b><label>
+				<input type="password" placeholder="Enter password" name= "psw" required>
 				
 				<label for="psw"><b>Password</b><label>
 				<input type="password" placeholder="Enter password" name= "psw" required>

@@ -89,35 +89,9 @@ nav a, nav .current{
  }
 
 
- 
- section#LoginPage a, section#SignUpPage a {
-	 
-	 font-size: 40px;
-	 color: white;
-	 text-decoration: none;
-	 position: center;
-	
- }
- 
- section#LoginPage, section#SignUpPage {
-	margin-left: 250px;
-	margin-top: 20px;
-    display: inline-block; /* Essential for padding/borders to work well */
-    padding: 10px 20px;
-    border: 2px solid green;
-	 background-color: green;
-    border-radius: 15px; /* Adjust this value for more or less curve */
-    color: green;
- }
-
-
 nav .current {
 	color: white;
 	font-size: 27px;
-}
-
-ol {
-	margin-left: 300px;
 }
 
 ol {
@@ -165,25 +139,15 @@ form#Login button {
 	color: white;
 	border-color: none;
 	
-	display: grid;
-	width: 75px;
 }
 
-form#Login button {
-	padding: 20px 40px;
-	border-radius: 50px;
-	background-color: green;
-	color: white;
-	border-color: none;
-	
-}
-
-form#LogForm, section#login{ 
+form#LogForm, section#login, form#signUp {
 	display: grid;
 	margin: auto;
 	gap: 0.5em;
 	width: fit-content;
 }
+
 
 section#Permits blockquote{
    margin: 0.75rem 0 0.75rem;
@@ -195,8 +159,6 @@ section#Permits blockquote{
 section#Licences blockquote q {
     font-style: italic; 
 }
-
-
 
 
    
