@@ -141,7 +141,7 @@ form#Login button {
 	
 }
 
-form#LogForm, section#login, {
+form#LogForm, section#login{ 
 	display: grid;
 	margin: auto;
 	gap: 0.5em;
