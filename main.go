@@ -58,11 +58,11 @@ func PermitsPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func SignUpPage(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "Signup.html", nil)
+	renderTemplate(w, "signup.html", nil)
 }
 
 func SignInPage(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "Login.html", nil)
+	renderTemplate(w, "login.html", nil)
 }
 
 func ZoneLicense(w http.ResponseWriter, r *http.Request) {
