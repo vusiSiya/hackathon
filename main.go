@@ -26,6 +26,7 @@ func main() {
 
 	//pages
 	mux.HandleFunc("/", HomePage)
+	mux.HandleFunc("/index", IndexPage)
 	mux.HandleFunc("/permits", PermitsPage)
 	mux.HandleFunc("/signup", SignUpPage)
 	mux.HandleFunc("/login", SignInPage)
@@ -46,6 +47,10 @@ func main() {
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "WelcomePage.html", nil)
+}
+
+func IndexPage(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "index.html", nil)
 }
 
 func PermitsPage(w http.ResponseWriter, r *http.Request) {
@@ -94,6 +99,7 @@ func HandleSignUp(w http.ResponseWriter, r *http.Request) {
 	Users[email] = user
 	fmt.Fprintf(w, "User %s created successfully", user.Name)
 	log.Printf("User %s created successfully", user.Name)
+	http.Redirect(w, r, "/login", http.StatusSeeOther)
 }
 
 func HandleSignIn(w http.ResponseWriter, r *http.Request) {
@@ -131,7 +137,8 @@ func HandleSignIn(w http.ResponseWriter, r *http.Request) {
 	user.SessionToken = sessionToken
 	fmt.Fprintf(w, "Welcome %s", user.Name)
 	log.Printf("User %s signed in successfully", user.Name)
-	//redirect user to Licenses list?
+
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
 func HandleApplyZoneLicense(w http.ResponseWriter, r *http.Request) {
