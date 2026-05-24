@@ -28,7 +28,7 @@ func main() {
 	mux.HandleFunc("/", HomePage)
 	mux.HandleFunc("/permits", PermitsPage)
 	mux.HandleFunc("/signup", SignUpPage)
-	mux.HandleFunc("/signinp", SignInPage)
+	mux.HandleFunc("/login", SignInPage)
 	mux.HandleFunc("POST /signout", SignOut)
 
 	mux.HandleFunc("/applications/zone-license", ZoneLicense)
@@ -37,7 +37,7 @@ func main() {
 
 	//requests
 	mux.HandleFunc("POST /api/signup", HandleSignUp)
-	mux.HandleFunc("POST /api/signin", HandleSignIn)
+	mux.HandleFunc("POST /api/login", HandleSignIn)
 	mux.HandleFunc("POST /api/apply-zone-license", HandleApplyZoneLicense)
 
 	log.Printf("Server listening on port :8000")
@@ -45,7 +45,7 @@ func main() {
 }
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "index.html", nil)
+	renderTemplate(w, "WelcomePage.html", nil)
 }
 
 func PermitsPage(w http.ResponseWriter, r *http.Request) {
